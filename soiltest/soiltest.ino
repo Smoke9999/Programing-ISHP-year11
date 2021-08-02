@@ -9,7 +9,7 @@
 */
 
 int val = 0; //value for storing moisture value 
-int soilPin = A0;//Declare a variable for the soil moisture sensor 
+int soilPin = 12;//Declare a variable for the soil moisture sensor 
 int soilPower = 7;//Variable for Soil moisture Power
 
 //Rather than powering the sensor through the 3.3V or 5V pins, 
