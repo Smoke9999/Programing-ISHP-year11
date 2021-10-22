@@ -146,6 +146,10 @@ void updateEPD() {
 
   drawText("Moisture", EPD_BLACK, 2, 0, 25);
   drawText(String(moistureValue), EPD_BLACK, 4, 0, 45);
+// Indigenous Country Name 
+drawText("wuriru", EPD_BLACK, 2,0,0);
+
+
 
   drawText("Pump", EPD_BLACK, 2, 130, 25);
   if (pumpIsRunning) {
@@ -164,7 +168,7 @@ void updateEPD() {
 
 String processor(const String& var) {
   Serial.println(var);
-  
+
   if (var == "DATETIME") {
     String datetime = getTimeAsString() + " " + getDateAsString();
     return datetime;
