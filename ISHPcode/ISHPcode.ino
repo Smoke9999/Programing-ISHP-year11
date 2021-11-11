@@ -92,7 +92,7 @@ void setup() {
   Serial.print("Connected to the Internet");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-// log in page for the website 
+  // log in page for the website
   pinMode(LED_BUILTIN, OUTPUT);
 
   server.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {
@@ -140,7 +140,7 @@ void setup() {
     Serial.println("output");
     request->send(SPIFFS, "/logEvents.csv", "text/html", true);
   });
-// adds the extra layer of security 
+  // adds the extra layer of security
   server.begin();
 
 
@@ -181,7 +181,7 @@ void updateEPD() {
 
   // Indigenous Country Name
   drawText("Wurriu", EPD_BLACK, 2, 0, 0);
-// diplays name on the EINK display
+  // diplays name on the EINK display
 
   // Config
   drawText(WiFi.localIP().toString(), EPD_BLACK, 1, 130, 80);
